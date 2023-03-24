@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HighFiveMusic Record's</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <img src="https://yt3.googleusercontent.com/6VOK3NXpYWLXh6A2Wt8KCO2OmC-NTY9rQTOuhmzUDjMLM1c7XNBhRNXu1MT6GmpenxQsczQ3=s176-c-k-c0x00ffffff-no-rj" alt="HighFiveMusic Record's logo">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Artists</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Latest YouTube Videos</h2>
+        <div>
+          <iframe width="420" height="315" src="https://www.youtube.com/embed/?listType=user_uploads&list=UCZvDHV9fQTq3UE2d7iSkclg" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/channel/UCZvDHV9fQTq3UE2d7iSkclg">Visit our YouTube channel</a>
+        </div>
+      </section>
+      <section>
+        <h2>Latest Instagram Posts</h2>
+        <div>
+          <!-- Replace "YOUR_INSTAGRAM_ACCESS_TOKEN" with your actual Instagram access token -->
+          <script type="text/javascript">
+            const accessToken = 'YOUR_INSTAGRAM_ACCESS_TOKEN';
+            fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`)
+              .then(response => response.json())
+              .then(data => {
+                const posts = data.data.slice(0, 3);
+                posts.forEach(post => {
+                  const div = document.createElement('div');
+                  const a = document.createElement('a');
+                  const img = document.createElement('img');
+                  const p = document.createElement('p');
+                  a.href = post.permalink;
+                  a.target = '_blank';
+                  img.src = post.media_url;
+                  img.alt = post.caption;
+                  p.textContent = post.caption;
+                  a.appendChild(img);
+                  div.appendChild(a);
+                  div.appendChild(p);
+                  document.querySelector('#instagram-posts').appendChild(div);
+                });
+              });
+          </script>
+          <div id="instagram-posts"></div>
+        </div>
+      </section>
+      <section>
+        <h2>Follow us on Spotify</h2>
+        <div>
+          <p>Check out our latest playlists:</p>
+          <ul>
+            <li><a href="https://open.spotify.com/playlist/4NxarSAYuSCXqruyY9JTer"><img src="https://i.scdn.co/image/ab67706f000000032ed48d3b3fc3cde918382f0e" alt="Slap Time 2023 playlist cover art">Slap Time 2023</a></li>
+            <li><a href="https://open.spotify.com/playlist/6p8H5rzvh0HlGtFTT0ZwNx"><img src="https://i.scdn.co/image/ab67706f000000032ed48d3b3fc3cde918382f0e" alt="Abendrot playlist cover art">Abendrot</a></li>
+            <li><a href="https://open.spotify.com/playlist/6p8H5rzvh0HlGtFTT0ZwNx"><img src="https://i.scdn.co/image/ab67706f000000032ed48d3b3fc3cde918382f0e" alt="Let's Get High playlist cover art">Let's Get High</a></li>
+          </ul>
+          <p><a href="https://open.spotify.com/user/11144920065">Follow our Spotify profile</a></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 HighFiveMusic Record's. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
