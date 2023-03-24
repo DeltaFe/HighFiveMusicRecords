@@ -1,5 +1,4 @@
 /* General styles */
-
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +66,6 @@ ul li {
 }
 
 /* Header styles */
-
 header {
   display: flex;
   justify-content: space-between;
@@ -119,8 +117,7 @@ header nav a:hover {
 
 .text-wrapper {
   margin-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 
 .text-wrapper p {
@@ -131,9 +128,7 @@ header nav a:hover {
   margin-top: 10px;
 }
 
-
 /* Instagram section styles */
-
 .instagram-section {
   display: flex;
   justify-content: space-between;
@@ -146,13 +141,8 @@ header nav a:hover {
   margin-right: 20px;
 }
 
-.instagram-section .instagram-feed ul li {
-  margin-bottom: 0;
-}
-
 .instagram-section .instagram-feed img {
   width: 100%;
-  max-width: 240px;
   height: 240px;
   object-fit: cover;
   border-radius: 5px;
@@ -164,7 +154,6 @@ header nav a:hover {
 }
 
 /* Spotify section styles */
-
 .spotify-section {
   display: flex;
   justify-content: space-between;
@@ -177,16 +166,11 @@ header nav a:hover {
   margin-left: 20px;
 }
 
-.spotify-section .spotify-playlists ul li {
-  margin-bottom: 0;
-}
-
 .spotify-section .spotify-playlists img {
   width: 100%;
-  max-width: 240px;
   height: 240px;
   object-fit: cover;
-  border-radius: 5;
+  border-radius: 5px;
 }
 
 .spotify-section .spotify-playlists .playlist-title {
