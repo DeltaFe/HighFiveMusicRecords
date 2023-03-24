@@ -20,8 +20,8 @@ body {
   padding: 0 20px;
 }
 
-img {
-  max-width: 100%;
+.logo {
+  max-width: 200px; /* Adjust this value as needed */
   height: auto;
 }
 
