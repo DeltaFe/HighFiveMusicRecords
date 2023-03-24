@@ -14,6 +14,17 @@ body {
   background-color: #121212;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: #fff;
   text-decoration: none;
